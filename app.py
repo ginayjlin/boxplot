@@ -130,5 +130,9 @@ def generate_boxplots(file_path, output_folder, include_l2=False):
             plt.close()
 
 # ===== 啟動 Flask =====
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=5500, debug=True)
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5500, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
